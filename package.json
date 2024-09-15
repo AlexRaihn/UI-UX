@@ -13,22 +13,10 @@
     "type-check": "vue-tsc --build --force",
     "prepare": "husky install"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
-    "*.{ts, vue, js}": [
-      "prettier --write",
-      "eslint --fix",
-      "jest --findRelatedTests",
-      "git add"
-    ],
-    "*.{html,css,less,ejs,json}": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.ts": "npx tsc --noEmit",
+    "*.{js,jsx,ts,tsx, vue}": "npx eslint",
+    "*.{js,jsx,ts,tsx,html,css, vue}": "npx prettier --check"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
