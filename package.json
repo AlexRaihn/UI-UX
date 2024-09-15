@@ -13,11 +13,6 @@
     "type-check": "vue-tsc --build --force",
     "prepare": "husky install"
   },
-  "lint-staged": {
-    "*.ts": "npx tsc --noEmit",
-    "*.{js,jsx,ts,tsx, vue}": "npx eslint",
-    "*.{js,jsx,ts,tsx,html,css, vue}": "npx prettier --check"
-  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
@@ -27,13 +22,11 @@
     "@primevue/themes": "^4.0.7",
     "animate.css": "^4.1.1",
     "axios": "^1.7.7",
-    "husky-init": "^8.0.0",
     "pinia": "^2.1.7",
     "primevue": "^4.0.7",
     "quill": "^2.0.2",
     "vue": "^3.4.29",
-    "vue-router": "^4.3.3",
-    "vueform": "^2.0.0"
+    "vue-router": "^4.3.3"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",
@@ -41,11 +34,6 @@
     "@vitejs/plugin-vue": "^5.0.5",
     "@vue/tsconfig": "^0.5.1",
     "autoprefixer": "^10.4.20",
-    "eslint": "^9.10.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
-    "husky": "^8.0.3",
-    "lint-staged": "^15.2.10",
     "npm-run-all2": "^6.2.0",
     "postcss": "^8.4.40",
     "prettier": "^3.3.3",
