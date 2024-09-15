@@ -20,6 +20,7 @@
         :class="{ 'rotate-90': isCollapsed }"
         @click="toggleCollapse"
       ></i>
+      тест
     </div>
     <div
       :class="{ 'animate__animated animate__fadeInDown': isCollapsed }"
