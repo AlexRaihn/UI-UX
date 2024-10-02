@@ -36,6 +36,9 @@
           </div>
         </template>
       </Card>
+      <div class="flex">
+        <MPagination :currentPage="1" :totalPage="10" :limiteDate="20" />
+      </div>
     </div>
   </div>
 </template>
@@ -44,6 +47,7 @@
 import { defineComponent } from "vue";
 import Card from "primevue/card";
 import Image from "primevue/image";
+import MPagination from "@/components/MPagination/MPagination.vue";
 import MDate from "@/components/MDate/MDate.vue";
 
 export default defineComponent({
@@ -51,6 +55,7 @@ export default defineComponent({
   components: {
     Card,
     Image,
+    MPagination,
     MDate,
   },
   data() {
