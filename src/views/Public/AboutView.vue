@@ -37,7 +37,11 @@
         </template>
       </Card>
       <div class="flex">
-        <MPagination :currentPage="1" :totalPage="10" :limiteDate="20" />
+        <MPagination
+          @update="getNewPage"
+          :current-page="currentPagelocal"
+          :totalPage="100"
+        />
       </div>
     </div>
   </div>
@@ -62,6 +66,23 @@ export default defineComponent({
     return {
       test: "2014-10-13",
     };
+  },
+  data() {
+    return {
+      currentPagelocal: 1,
+    };
+  },
+  methods: {
+    getNewPage(page: number) {
+      this.currentPagelocal = page;
+    },
+  },
+  watch: {
+    currentPagelocal(oldV, newV) {
+      if (oldV !== newV) {
+        console.log("Я РОДИЛСЯ");
+      }
+    },
   },
 });
 </script>
