@@ -1,6 +1,9 @@
 <template>
   <div class="p-4">
     <div class="flex flex-col gap-4">
+      <div class="flex">
+        <MDate v-model="test" label="Тест" description="Тест описание" />
+      </div>
       <Card>
         <template #title> О Сайте </template>
         <template #content>
@@ -44,8 +47,8 @@
 import { defineComponent } from "vue";
 import Card from "primevue/card";
 import Image from "primevue/image";
-
 import MPagination from "@/components/MPagination/MPagination.vue";
+import MDate from "@/components/MDate/MDate.vue";
 
 export default defineComponent({
   name: "AboutView",
@@ -53,6 +56,12 @@ export default defineComponent({
     Card,
     Image,
     MPagination,
+    MDate,
+  },
+  data() {
+    return {
+      test: "2014-10-13",
+    };
   },
 });
 </script>
