@@ -3,6 +3,7 @@
     <div class="flex flex-col gap-4">
       <div class="flex">
         <MDate v-model="test" label="Тест" description="Тест описание" />
+        <MPopover> Ест </MPopover>
       </div>
       <Card>
         <template #title> О Сайте </template>
@@ -53,10 +54,12 @@ import Card from "primevue/card";
 import Image from "primevue/image";
 import MPagination from "@/components/MPagination/MPagination.vue";
 import MDate from "@/components/MDate/MDate.vue";
+import MPopover from "@/components/MPopover/MPopover.vue";
 
 export default defineComponent({
   name: "AboutView",
   components: {
+    MPopover,
     Card,
     Image,
     MPagination,
